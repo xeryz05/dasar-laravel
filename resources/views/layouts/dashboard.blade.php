@@ -310,7 +310,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{route('departemant.index')}}">
               <i class="bi bi-circle"></i><span>Departement Management</span>
             </a>
           </li>
@@ -323,12 +323,12 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="{{route('leader.index')}}">
               <i class="bi bi-circle"></i><span>Admin User</span>
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
+            <a href="{{route('employees.index')}}">
               <i class="bi bi-circle"></i><span>Departement User</span>
             </a>
           </li>
@@ -384,11 +384,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>@yield('header')</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">@yield('link-header')</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

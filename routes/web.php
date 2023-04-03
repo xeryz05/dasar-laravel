@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\DepartemantController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\LeaderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +24,8 @@ Route::get('/', function () {
 Route::get('/dashboard/admin/dashboard', function () {
     return view('/dashboard/admin/dashboard');
 });
+
+Route::resource('/departemants', DepartemantController::class);
+Route::resource('/employees', EmployeeController::class);
+// Route::get('/employees', [EmployeeController::class, 'index']);
+Route::resource('/leaders', LeaderController::class);
